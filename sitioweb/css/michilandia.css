@@ -1,0 +1,426 @@
+/* =====================================
+   MICHILANDIA - ESTILOS GENERALES
+===================================== */
+
+:root {
+    /* Paleta extraída del logo oficial */
+    --michi-red: #c62828;
+    --michi-red-hover: #a71d1d;
+    --michi-yellow: #f5b025;
+    --michi-yellow-light: #fff3d1;
+    --michi-light: #fffcf7;
+    --michi-cream: #fff5e6;
+    --michi-text: #4a2e2b;
+    --michi-muted: #8c6d68;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--michi-light);
+    color: var(--michi-text);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* =====================================
+   BARRA DE NAVEGACIÓN
+===================================== */
+
+.michi-navbar {
+    background: rgba(255, 252, 247, 0.97);
+    padding: 12px 0;
+    border-bottom: 1px solid #fce8d5;
+    box-shadow: 0 4px 18px rgba(198, 40, 40, 0.08);
+}
+
+.michi-logo {
+    width: 53px;
+    height: 53px;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Oculta el patrón a cuadros claro */
+}
+
+.michi-brand {
+    display: flex;
+    flex-direction: column;
+    color: var(--michi-red);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.michi-brand small {
+    color: var(--michi-muted);
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.michi-navbar .nav-link {
+    color: var(--michi-text);
+    font-weight: 600;
+    padding: 10px 13px !important;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+.michi-navbar .nav-link:hover {
+    color: var(--michi-red);
+    background-color: var(--michi-yellow-light);
+    transform: translateY(-2px);
+}
+
+.michi-navbar .nav-link i {
+    margin-right: 5px;
+}
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
+.michi-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 0;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.9) 0 7%, transparent 7.5%),
+        linear-gradient(135deg, #fff3e0, #fffcf7 55%, #ffebee);
+}
+
+.hero-text {
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 17px;
+    background: white;
+    border-radius: 30px;
+    color: var(--michi-red);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.10);
+}
+
+.hero-text h1 {
+    margin-top: 25px;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--michi-text);
+}
+
+.hero-text h1 span {
+    display: block;
+    color: var(--michi-red);
+}
+
+.hero-text p {
+    max-width: 470px;
+    margin: 22px 0 30px;
+    color: var(--michi-muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* BOTÓN */
+
+.btn-michi {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: var(--michi-red);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 7px 18px rgba(198, 40, 40, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-michi:hover {
+    color: white;
+    background: var(--michi-red-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(198, 40, 40, 0.35);
+}
+
+/* =====================================
+   DECORACIÓN DE PORTADA
+===================================== */
+
+.hero-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    position: relative;
+}
+
+.hero-circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 12px solid rgba(245, 176, 37, 0.3);
+    box-shadow: 0 15px 45px rgba(198, 40, 40, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Elimina la apariencia a cuadros de la imagen */
+}
+
+.decoration {
+    position: absolute;
+    color: var(--michi-yellow);
+    font-size: 48px;
+}
+
+.decoration-one {
+    top: 15%;
+    left: 12%;
+}
+
+.decoration-two {
+    bottom: 15%;
+    left: 17%;
+    color: var(--michi-red);
+}
+
+.decoration-three {
+    top: 25%;
+    right: 10%;
+    color: var(--michi-yellow);
+}
+
+/* =====================================
+   CATÁLOGO
+===================================== */
+
+.michi-products {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.section-heading span {
+    color: var(--michi-red);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--michi-text);
+}
+
+.section-heading p {
+    color: var(--michi-muted);
+}
+
+.catalog-placeholder {
+    margin-top: 35px;
+    padding: 55px 20px;
+    text-align: center;
+    border: 2px dashed #f5b025;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.catalog-placeholder i {
+    font-size: 45px;
+    color: var(--michi-red);
+}
+
+.catalog-placeholder h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.catalog-placeholder p {
+    color: var(--michi-muted);
+    margin-bottom: 0;
+}
+
+/* =====================================
+   SECCIÓN DE DESCARGA
+===================================== */
+
+.michi-download {
+    padding: 55px 0;
+    background: var(--michi-cream);
+}
+
+.download-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 55px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(74, 46, 43, 0.05);
+}
+
+.download-text {
+    max-width: 650px;
+}
+
+.download-label {
+    color: var(--michi-red);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.download-text h2 {
+    margin-top: 12px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.download-text p {
+    color: var(--michi-muted);
+    line-height: 1.8;
+}
+
+.download-image img {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.download-image img:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.michi-footer {
+    padding-top: 55px;
+    background: #4a2e2b;
+    color: #fff5e6;
+}
+
+.michi-footer h4 {
+    color: var(--michi-yellow);
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.michi-footer h5 {
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.michi-footer p {
+    color: #d4c3bd;
+    line-height: 1.8;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #d4c3bd;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--michi-yellow);
+}
+
+.michi-footer hr {
+    border-color: rgba(255, 245, 230, 0.15);
+}
+
+.footer-bottom {
+    padding: 12px 0;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    margin-bottom: 0;
+    color: #b39b94;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+    .michi-navbar .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoration {
+        min-height: 330px;
+    }
+
+    .hero-circle {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 576px) {
+    .michi-hero {
+        padding: 50px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 39px;
+    }
+
+    .hero-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .michi-products {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .download-content {
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
